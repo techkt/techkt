@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nexus Software | Enterprise Solutions</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Custom CSS for animations */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .fade-in {
+            animation: fadeIn 1s ease-out forwards;
+        }
+        
+        .delay-1 { animation-delay: 0.2s; }
+        .delay-2 { animation-delay: 0.4s; }
+        .delay-3 { animation-delay: 0.6s; }
+        
+        .gradient-text {
+            background: linear-gradient(90deg, #000000, #333333);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        
+        .nav-link::after {
+            content: '';
+            display: block;
+            width: 0;
+            height: 2px;
+            background: #000;
+            transition: width .3s;
+        }
+        
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        }
+        
+        .service-card {
+            transition: all 0.3s ease;
+        }
+    </style>
+</head>
+<body class="bg-white text-gray-900 font-sans">
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-white z-50 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <div class="flex-shrink-0 flex items-center">
+                    <span class="text-2xl font-bold gradient-text">NEXUS</span>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-center space-x-8">
+                        <a href="#home" class="nav-link px-3 py-2 text-sm font-medium">Home</a>
+                        <a href="#services" class="nav-link px-3 py-2 text-sm font-medium">Services</a>
+                        <a href="#about" class="nav-link px-3 py-2 text-sm font-medium">About</a>
+                        <a href="#work" class="nav-link px-3 py-2 text-sm font-medium">Work</a>
+                        <a href="#contact" class="nav-link px-3 py-2 text-sm font-medium">Contact</a>
+                        <button class="bg-black text-white px-6 py-2 rounded-md font-medium hover:bg-gray-800 transition duration-300">
+                            Get Started
+                        </button>
+                    </div>
+                </div>
+                <div class="md:hidden">
+                    <button id="menu-toggle" class="text-gray-900 focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="md:hidden hidden bg-white shadow-lg">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#home" class="block px-3 py-2 rounded-md text-base font-medium">Home</a>
+                <a href="#services" class="block px-3 py-2 rounded-md text-base font-medium">Services</a>
+                <a href="#about" class="block px-3 py-2 rounded-md text-base font-medium">About</a>
+                <a href="#work" class="block px-3 py-2 rounded-md text-base font-medium">Work</a>
+                <a href="#contact" class="block px-3 py-2 rounded-md text-base font-medium">Contact</a>
+                <button class="w-full bg-black text-white px-6 py-2 rounded-md font-medium mt-2">
+                    Get Started
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="pt-32 pb-20 md:pt-40 md:pb-32 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        <div class="flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-12 md:mb-0 fade-in">
+                <h1 class="text-4xl md:text-6xl font-bold leading-tight mb-6">
+                    Building <span class="gradient-text">Digital</span> <br>Experiences That Matter
+                </h1>
+                <p class="text-lg text-gray-700 mb-8 max-w-lg">
+                    We design and develop custom software solutions that drive business growth and enhance user experiences.
+                </p>
+                <div class="flex space-x-4">
+                    <button class="bg-black text-white px-8 py-3 rounded-md font-medium hover:bg-gray-800 transition duration-300">
+                        Our Work
+                    </button>
+                    <button class="border-2 border-black px-8 py-3 rounded-md font-medium hover:bg-gray-100 transition duration-300">
+                        Learn More
+                    </button>
+                </div>
+            </div>
+            <div class="md:w-1/2 fade-in delay-1">
+                <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+                     alt="Software development" 
+                     class="rounded-lg shadow-xl w-full h-auto object-cover">
+            </div>
+        </div>
+    </section>
+
+    <!-- Clients Section -->
+    <section class="py-12 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h3 class="text-center text-gray-500 text-sm font-medium mb-8 fade-in delay-2">TRUSTED BY INDUSTRY LEADERS</h3>
+            <div class="grid grid-cols-2 md:grid-cols-5 gap-8 items-center justify-center fade-in delay-3">
+                <div class="flex justify-center">
+                    <span class="text-2xl font-bold opacity-80">NETFLIX</span>
+                </div>
+                <div class="flex justify-center">
+                    <span class="text-2xl font-bold opacity-80">AIRBNB</span>
+                </div>
+                <div class="flex justify-center">
+                    <span class="text-2xl font-bold opacity-80">SPOTIFY</span>
+                </div>
+                <div class="flex justify-center">
+                    <span class="text-2xl font-bold opacity-80">UBER</span>
+                </div>
+                <div class="flex justify-center">
+                    <span class="text-2xl font-bold opacity-80">DROPBOX</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4 fade-in">Our Services</h2>
+            <p class="text-gray-700 max-w-2xl mx-auto fade-in delay-1">
+                We offer comprehensive software development services tailored to your business needs.
+            </p>
+        </div>
+        
+        <div class="grid md:grid-cols-3 gap-8">
+            <div class="service-card bg-white p-8 rounded-lg border border-gray-200 fade-in delay-1">
+                <div class="w-14 h-14 bg-black rounded-full flex items-center justify-center mb-6">
+                    <i class="fas fa-code text-white text-xl"></i>
+                </div>
+                <h3 class="text-xl font-bold mb-3">Custom Development</h3>
+                <p class="text-gray-700 mb-4">
+                    Tailored software solutions designed specifically for your business requirements and workflows.
+                </p>
+                <a href="#" class="text-black font-medium flex items-center">
+                    Learn more <i class="fas fa-arrow-right ml-2"></i>
+                </a>
+            </div>
+            
+            <div class="service-card bg-white p-8 rounded-lg border border-gray-200 fade-in delay-2">
+                <div class="w-14 h-14 bg-black rounded-full flex items-center justify-center mb-6">
+                    <i class="fas fa-mobile-alt text-white text-xl"></i>
+                </div>
+                <h3 class="text-xl font-bold mb-3">Mobile Applications</h3>
+                <p class="text-gray-700 mb-4">
+                    Cross-platform mobile apps that deliver seamless user experiences across all devices.
+                </p>
+                <a href="#" class="text-black font-medium flex items-center">
+                    Learn more <i class="fas fa-arrow-right ml-2"></i>
+                </a>
+            </div>
+            
+            <div class="service-card bg-white p-8 rounded-lg border border-gray-200 fade-in delay-3">
+                <div class="w-14 h-14 bg-black rounded-full flex items-center justify-center mb-6">
+                    <i class="fas fa-cloud text-white text-xl"></i>
+                </div>
+                <h3 class="text-xl font-bold mb-3">Cloud Solutions</h3>
+                <p class="text-gray-700 mb-4">
+                    Scalable cloud infrastructure and services to power your digital transformation.
+                </p>
+                <a href="#" class="text-black font-medium flex items-center">
+                    Learn more <i class="fas fa-arrow-right ml-2"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-12 md:mb-0 pr-0 md:pr-12 fade-in">
+                    <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+                         alt="Our team" 
+                         class="rounded-lg shadow-xl w-full h-auto object-cover">
+                </div>
+                <div class="md:w-1/2 fade-in delay-1">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-6">About Nexus</h2>
+                    <p class="text-gray-700 mb-6">
+                        Founded in 2010, Nexus Software has been at the forefront of digital innovation, helping businesses transform their operations through cutting-edge technology solutions.
+                    </p>
+                    <p class="text-gray-700 mb-8">
+                        Our team of 50+ engineers, designers, and strategists work collaboratively to deliver exceptional results for clients across various industries.
+                    </p>
+                    <div class="flex flex-wrap gap-4 mb-8">
+                        <div class="flex items-center">
+                            <div class="w-3 h-3 bg-black rounded-full mr-2"></div>
+                            <span class="text-gray-700">15+ Years Experience</span>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="w-3 h-3 bg-black rounded-full mr-2"></div>
+                            <span class="text-gray-700">50+ Team Members</span>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="w-3 h-3 bg-black rounded-full mr-2"></div>
+                            <span class="text-gray-700">200+ Projects Delivered</span>
+                        </div>
+                    </div>
+                    <button class="bg-black text-white px-8 py-3 rounded-md font-medium hover:bg-gray-800 transition duration-300">
+                        Meet Our Team
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Work Section -->
+    <section id="work" class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4 fade-in">Our Work</h2>
+            <p class="text-gray-700 max-w-2xl mx-auto fade-in delay-1">
+                Explore some of our recent projects that demonstrate our expertise and creativity.
+            </p>
+        </div>
+        
+        <div class="grid md:grid-cols-2 gap-8 mb-12">
+            <div class="fade-in">
+                <div class="bg-gray-100 rounded-lg overflow-hidden h-80 mb-4">
+                    <img src="https://images.unsplash.com/photo-1547658719-da2b51169166?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1528&q=80" 
+                         alt="Project 1" 
+                         class="w-full h-full object-cover">
+                </div>
+                <h3 class="text-xl font-bold mb-2">E-commerce Platform</h3>
+                <p class="text-gray-700">A scalable online marketplace with advanced search and recommendation features.</p>
+            </div>
+            
+            <div class="fade-in delay-1">
+                <div class="bg-gray-100 rounded-lg overflow-hidden h-80 mb-4">
+                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+                         alt="Project 2" 
+                         class="w-full h-full object-cover">
+                </div>
+                <h3 class="text-xl font-bold mb-2">Healthcare Management</h3>
+                <p class="text-gray-700">A HIPAA-compliant system for patient records and appointment scheduling.</p>
+            </div>
+        </div>
+        
+        <div class="text-center fade-in delay-2">
+            <button class="border-2 border-black px-8 py-3 rounded-md font-medium hover:bg-gray-100 transition duration-300">
+                View All Projects
+            </button>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 fade-in">Client Testimonials</h2>
+                <p class="text-gray-700 max-w-2xl mx-auto fade-in delay-1">
+                    Hear what our clients say about working with us.
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-lg shadow-sm fade-in delay-1">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full bg-gray-300 mr-4 overflow-hidden">
+                            <img src="https://randomuser.me/api/portraits/women/43.jpg" alt="Client" class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h4 class="font-bold">Sarah Johnson</h4>
+                            <p class="text-gray-600 text-sm">CEO, TechCorp</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700">
+                        "Nexus delivered our project on time and exceeded our expectations. Their team was professional and communicative throughout the process."
+                    </p>
+                    <div class="flex mt-4 text-yellow-400">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+                
+                <div class="bg-white p-8 rounded-lg shadow-sm fade-in delay-2">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full bg-gray-300 mr-4 overflow-hidden">
+                            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Client" class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h4 class="font-bold">Michael Chen</h4>
+                            <p class="text-gray-600 text-sm">CTO, FinTech Solutions</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700">
+                        "The custom CRM system Nexus built for us has transformed our sales process. Their technical expertise is unmatched."
+                    </p>
+                    <div class="flex mt-4 text-yellow-400">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+                
+                <div class="bg-white p-8 rounded-lg shadow-sm fade-in delay-3">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full bg-gray-300 mr-4 overflow-hidden">
+                            <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Client" class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h4 class="font-bold">Emily Rodriguez</h4>
+                            <p class="text-gray-600 text-sm">Director, HealthPlus</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700">
+                        "Working with Nexus was a game-changer for our digital transformation. They understood our needs perfectly and delivered exceptional results."
+                    </p>
+                    <div class="flex mt-4 text-yellow-400">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        <div class="flex flex-col md:flex-row">
+            <div class="md:w-1/2 mb-12 md:mb-0 pr-0 md:pr-12 fade-in">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6">Get In Touch</h2>
+                <p class="text-gray-700 mb-8 max-w-md">
+                    Ready to start your project? Have questions about our services? We'd love to hear from you.
+                </p>
+                <div class="space-y-4">
+                    <div class="flex items-center">
+                        <div class="w-10 h-10 rounded-full bg-black flex items-center justify-center mr-4">
+                            <i class="fas fa-map-marker-alt text-white"></i>
+                        </div>
+                        <p class="text-gray-700">123 Tech Street, San Francisco, CA 94107</p>
+                    </div>
+                    <div class="flex items-center">
+                        <div class="w-10 h-10 rounded-full bg-black flex items-center justify-center mr-4">
+                            <i class="fas fa-phone-alt text-white"></i>
+                        </div>
+                        <p class="text-gray-700">+1 (555) 123-4567</p>
+                    </div>
+                    <div class="flex items-center">
+                        <div class="w-10 h-10 rounded-full bg-black flex items-center justify-center mr-4">
+                            <i class="fas fa-envelope text-white"></i>
+                        </div>
+                        <p class="text-gray-700">hello@nexussoftware.com</p>
+                    </div>
+                </div>
+            </div>
+            <div class="md:w-1/2 fade-in delay-1">
+                <form class="space-y-6">
+                    <div>
+                        <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Name</label>
+                        <input type="text" id="name" name="name" class="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-black focus:border-transparent">
+                    </div>
+                    <div>
+                        <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email</label>
+                        <input type="email" id="email" name="email" class="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-black focus:border-transparent">
+                    </div>
+                    <div>
+                        <label for="message" class="block text-sm font-medium text-gray-700 mb-1">Message</label>
+                        <textarea id="message" name="message" rows="4" class="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-black focus:border-transparent"></textarea>
+                    </div>
+                    <button type="submit" class="w-full bg-black text-white px-6 py-3 rounded-md font-medium hover:bg-gray-800 transition duration-300">
+                        Send Message
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div class="mb-8 md:mb-0">
+                    <h3 class="text-2xl font-bold mb-4">NEXUS</h3>
+                    <p class="text-gray-400">
+                        Building innovative software solutions for businesses worldwide.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Company</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">About Us</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Careers</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Blog</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Press</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Services</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Web Development</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Mobile Apps</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">UI/UX Design</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Cloud Services</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Connect</h4>
+                    <div class="flex space-x-4 mb-4">
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-gray-700 transition">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-gray-700 transition">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-gray-700 transition">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-gray-700 transition">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                    <p class="text-gray-400">Subscribe to our newsletter</p>
+                    <div class="flex mt-2">
+                        <input type="email" placeholder="Your email" class="px-4 py-2 rounded-l-md focus:outline-none text-gray-900 w-full">
+                        <button class="bg-white text-black px-4 py-2 rounded-r-md hover:bg-gray-200 transition">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 mb-4 md:mb-0">© 2023 Nexus Software. All rights reserved.</p>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-white transition">Privacy Policy</a>
+                    <a href="#" class="text-gray-400 hover:text-white transition">Terms of Service</a>
+                    <a href="#" class="text-gray-400 hover:text-white transition">Cookies</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    const mobileMenu = document.getElementById('mobile-menu');
+                    if (!mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                    }
+                }
+            });
+        });
+        
+        // Add animation classes when elements come into view
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in');
+                }
+            });
+        }, {
+            threshold: 0.1
+        });
+        
+        document.querySelectorAll('.fade-in').forEach(element => {
+            observer.observe(element);
+        });
+    </script>
+</body>
+</html>
